@@ -1,0 +1,10 @@
+c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Client_Worker\bin\Release\Client_Worker.exe.config
+c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Client_Worker\bin\Release\Client_Worker.exe
+c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Client_Worker\bin\Release\ZedGraph.dll
+c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Client_Worker\bin\Release\ZedGraph.xml
+c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Client_Worker\obj\Release\ResolveAssemblyReference.cache
+c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Client_Worker\obj\Release\Client_Worker_Class.MainForm.resources
+c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Client_Worker\obj\Release\SR02_Client_Worker.csproj.GenerateResource.Cache
+c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Client_Worker\obj\Release\Client_Worker.exe
+E:\sr_02\projekt_sr02\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Client_Worker\bin\Release\Client_Worker.exe.config
+E:\sr_02\projekt_sr02\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Client_Worker\obj\Release\Client_Worker.exe

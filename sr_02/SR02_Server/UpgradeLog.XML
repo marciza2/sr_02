@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MAS_Server_ManagerAgent">
+</Property><Property Name="Solution File" Value="C:\Programowanie\Agenty\MAS_Server_ManagerAgent\MAS_Server_ManagerAgent.sln">
+</Property><Property Name="Date" Value="26 grudnia 2008">
+</Property><Property Name="Time" Value="15:43">
+</Property></Properties><Event ErrorLevel="0" Project="MAS_Server_ManagerAgent" Source="MAS_Server_ManagerAgent.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="MAS_Server_ManagerAgent" Source="MAS_Server_ManagerAgent.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="MAS_Server_ManagerAgent.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MAS_Server_ManagerAgent.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="MAS_Server_ManagerAgent" Source="MAS_Server_ManagerAgent.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
