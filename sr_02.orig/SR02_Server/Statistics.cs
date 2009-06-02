@@ -24,16 +24,6 @@ namespace Server_Class
         {
             Items = new List<ServerStatItem>();
         }
-        public double GetDutchStartValue(int Len, UInt32 Count)
-        {
-            double max = 0.0;
-            foreach (ServerStatItem ssItem in Items)
-                if (ssItem.Len == Len && ssItem.Time > max)
-                    max = ssItem.Time;
-            max *= Count;
-            max *= 0.33;
-            return max;
-        }
         public void AddItem(MsgContent_InitData_Ans msgConInitDataAns, ClientInfo clInfo)
         {
             Items.Add(new ServerStatItem(msgConInitDataAns.Len, msgConInitDataAns.Time, clInfo));

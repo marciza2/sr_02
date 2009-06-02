@@ -319,35 +319,6 @@ namespace Client_Worker_Class
                             clientStream.Write(buffer, 0, buffer.Length);
                             clientStream.Flush();
                             break;
-                        case ComMessage.MsgTypes.DUTCH_TIME_TO_DO:
-                            MsgContent_Dutch_Time_To_Do msgContent_Dutch_Time_To_Do = (MsgContent_Dutch_Time_To_Do)recMessage.GetContentObject();
-                            // oblicz odeślij
-                            ansMessage = new ComMessage(ComMessage.MsgTypes.TIME_ESTIMATED);
-                            if (workingThread != null)
-                            {
-                                if (workingThread.IsAlive)
-                                    estTime = -1;
-                                else
-                                    estTime = statistics.CalcTime(msgContent_Dutch_Time_To_Do.Len, msgContent_Dutch_Time_To_Do.Pack, PCPUUsage.NextValue());
-                            }
-                            else
-                                estTime = random.Next(4000) + 1000;
-                            if(estTime == -1)
-                                ansMessage.SetContentObject(-1.0);
-                            else if(estTime<msgContent_Dutch_Time_To_Do.Time)
-                                ansMessage.SetContentObject(1.0);
-                            else if(estTime<msgContent_Dutch_Time_To_Do.Time+msgContent_Dutch_Time_To_Do.Time*0.1)
-                                ansMessage.SetContentObject(1.0);
-                            else
-                                ansMessage.SetContentObject(0.0);
-                            Log("Odpowiedz na DUTCH_TIME_TODO = " + (msgContent_Dutch_Time_To_Do.Time).ToString());
-                            Log("Odpowiedz na DUTCH_TIME_TODO = " + estTime.ToString());
-                            Log("Odpowiedz na DUTCH_TIME_TODO = " + ((double)ansMessage.GetContentObject()).ToString());
-                            ansMessage.txtMsg = "odp";
-                            buffer = ansMessage.Serialize();
-                            clientStream.Write(buffer, 0, buffer.Length);
-                            clientStream.Flush();
-                            break;
                         case ComMessage.MsgTypes.GENERAL_MSG:
 							break;
 						case ComMessage.MsgTypes.DATA:

@@ -39,7 +39,6 @@ namespace Server_Class
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.workingModeComboBox = new System.Windows.Forms.ComboBox();
             this.buttonStart = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -48,6 +47,7 @@ namespace Server_Class
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -56,6 +56,7 @@ namespace Server_Class
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.workingModeComboBox);
             this.panel1.Controls.Add(this.buttonStart);
@@ -67,19 +68,8 @@ namespace Server_Class
             // 
             // label1
             // 
-            // 
-            // label1
-            // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(157, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Protokół komunikacji:";
-            // 
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(157, 15);
+            this.label1.Location = new System.Drawing.Point(110, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 13);
             this.label1.TabIndex = 6;
@@ -89,7 +79,7 @@ namespace Server_Class
             // 
             this.workingModeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.workingModeComboBox.FormattingEnabled = true;
-            this.workingModeComboBox.Location = new System.Drawing.Point(274, 12);
+            this.workingModeComboBox.Location = new System.Drawing.Point(227, 14);
             this.workingModeComboBox.Name = "workingModeComboBox";
             this.workingModeComboBox.Size = new System.Drawing.Size(121, 21);
             this.workingModeComboBox.TabIndex = 4;
@@ -171,6 +161,15 @@ namespace Server_Class
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 41);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Koniec obliczeń";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,5 +198,6 @@ namespace Server_Class
         private System.Windows.Forms.TabPage tabPage2;
         private ZedGraph.ZedGraphControl zedGraphControl1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
 	}
 }
