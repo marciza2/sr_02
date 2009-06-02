@@ -8,3 +8,5 @@ c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR
 c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Client_Worker\obj\Release\Client_Worker.exe
 E:\sr_02\projekt_sr02\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Client_Worker\bin\Release\Client_Worker.exe.config
 E:\sr_02\projekt_sr02\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Client_Worker\obj\Release\Client_Worker.exe
+D:\Documents and Settings\Marcinek\sr_02\sr_02\SR02_Client_Worker\bin\Release\Client_Worker.exe.config
+D:\Documents and Settings\Marcinek\sr_02\sr_02\SR02_Client_Worker\obj\Release\Client_Worker.exe

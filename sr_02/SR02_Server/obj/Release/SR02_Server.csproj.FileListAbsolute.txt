@@ -6,3 +6,4 @@ c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR
 c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Server\obj\Release\SR02_Server.csproj.GenerateResource.Cache
 c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Server\obj\Release\Server.exe
 E:\sr_02\projekt_sr02\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Server\obj\Release\Server.exe
+D:\Documents and Settings\Marcinek\sr_02\sr_02\SR02_Server\obj\Release\Server.exe
