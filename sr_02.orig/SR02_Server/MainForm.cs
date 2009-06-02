@@ -32,7 +32,6 @@ namespace Server_Class
     public partial class MainForm : Form
     {
         LineItem myCurve;
-        //BarItem myBar;
         private TcpListener tcpListener;
         private Thread listenThread;
         private Thread managerThread;
@@ -49,6 +48,9 @@ namespace Server_Class
         private List<UInt32> packList;
         BigInteger biData;
         BigInteger biStart;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainForm"/> class.
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();
@@ -68,7 +70,9 @@ namespace Server_Class
                 workingModeComboBox.Items.Add(Enum.GetNames(typeof(CommunicationMode))[i].Substring(2));
             workingModeComboBox.SelectedIndex = 0;
         }
-        // nasłuchiwanie klientów | oddzielny wątek
+        /// <summary>
+        /// Listens for clients.
+        /// </summary>
         private void ListenForClients()
         {
             this.tcpListener.Start();
@@ -103,6 +107,10 @@ namespace Server_Class
                 Log(client.Client.RemoteEndPoint.ToString());
             }
         }
+        /// <summary>
+        /// Handles the clients communication.
+        /// </summary>
+        /// <param name="client">The client.</param>
         private void HandleClientComm(object client)
         {
             TcpClient tcpClient = (TcpClient)client;
@@ -205,17 +213,32 @@ namespace Server_Class
             tcpClient.Close();
         }
 
+        /// <summary>
+        /// Logs the specified text.
+        /// </summary>
+        /// <param name="text">The text.</param>
         public void Log(string text)
         {
             richTextBox1.AppendText(text);
             richTextBox1.AppendText(System.Environment.NewLine);
         }
+        /// <summary>
+        /// Logs the specified text.
+        /// </summary>
+        /// <param name="text">The text.</param>
+        /// <param name="clr">The text color.</param>
         public void Log(string text, Color clr)
         {
             richTextBox1.SelectionColor = clr;
             Log(text);
             richTextBox1.SelectionColor = Color.Black;
         }
+        /// <summary>
+        /// Logs the specified text.
+        /// </summary>
+        /// <param name="text">The text.</param>
+        /// <param name="clr">The text color.</param>
+        /// <param name="Bold">Text bold.</param>
         public void Log(string text, Color clr, bool Bold)
         {
             richTextBox1.SelectionColor = clr;
@@ -225,6 +248,9 @@ namespace Server_Class
             richTextBox1.SelectionColor = Color.Black;
             richTextBox1.SelectionFont = new Font("Courier New", 9, FontStyle.Regular);
         }
+        /// <summary>
+        /// Manager the thread function.
+        /// </summary>
         void ManageThreadFun()
         {
             DateTime startTime = DateTime.Now;
@@ -351,6 +377,11 @@ namespace Server_Class
             }
         }
 
+        /// <summary>
+        /// Mains the form form closing.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="System.Windows.Forms.FormClosingEventArgs"/> instance containing the event data.</param>
         void MainFormFormClosing(object sender, FormClosingEventArgs e)
         {
             if (managerThread != null)
@@ -359,11 +390,21 @@ namespace Server_Class
             listenThread.Abort();
         }
 
+        /// <summary>
+        /// Start button the click.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
         void ButtonStartClick(object sender, EventArgs e)
         {
             this.managerThread = new Thread(new ThreadStart(ManageThreadFun));
             this.managerThread.Start();
         }
+        /// <summary>
+        /// Handles the Click event of the button2 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
         private void button2_Click(object sender, EventArgs e)
         {
             //byte[] integer = { 0x10, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
@@ -378,12 +419,22 @@ namespace Server_Class
 
         }
 
+        /// <summary>
+        /// Handles the SelectedIndexChanged event of the workingModeComboBox control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
         private void workingModeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             commMode = (CommunicationMode)(workingModeComboBox.SelectedIndex);
         }
 
 
+        /// <summary>
+        /// Handles the Tick event of the timer1 control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
         private void timer1_Tick(object sender, EventArgs e)
         {
             GraphPane myPane = zedGraphControl1.GraphPane;
