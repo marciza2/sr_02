@@ -1,0 +1,10 @@
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\bin\Debug\Client_Worker.exe.config
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\bin\Debug\Client_Worker.exe
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\bin\Debug\Client_Worker.pdb
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\bin\Debug\ZedGraph.dll
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\bin\Debug\ZedGraph.xml
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\obj\Debug\Client_Worker_Class.MainForm.resources
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\obj\Debug\SR02_Client_Worker.csproj.GenerateResource.Cache
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\obj\Debug\Client_Worker.exe
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\obj\Debug\Client_Worker.pdb

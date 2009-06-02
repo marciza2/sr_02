@@ -72,6 +72,7 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="ClientInfo.cs" />
     <Compile Include="ComMessage.cs" />
+    <Compile Include="HexEncoding.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

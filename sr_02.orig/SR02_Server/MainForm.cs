@@ -254,8 +254,17 @@ namespace Server_Class
         void ManageThreadFun()
         {
             DateTime startTime = DateTime.Now;
-            byte[] tmp = { 0x00, 0x00, 0x00, 0x00 };// { 0x4A, 0x00, 0x36, 0x36 };// 
-            byte[] tmp2 = { 0x00, 0x80, 0x00, 0x00 };// 0xFF, 0xFF, 0xFF, 0xFF }; { 0x4A, 0x41, 0x44, 0x45 };
+            string endInt = "";
+            int outDisc;
+            for (int i = 0; i < numericUpDown1.Value; i++)
+                endInt += "00";
+            byte[] tmp = Utility.HexEncoding.GetBytes(endInt, out outDisc);
+            endInt = "";
+            for (int i = 0; i < numericUpDown1.Value; i++)
+                endInt += ((int)numericUpDown2.Value).ToString("X2");
+            byte[] tmp2 = Utility.HexEncoding.GetBytes(endInt, out outDisc);
+            //byte[] tmp = { 0x00, 0x00, 0x00, 0x00 };// { 0x4A, 0x00, 0x36, 0x36 };// 
+            //byte[] tmp2 = { 0x00, 0x80, 0x00, 0x00 };// 0xFF, 0xFF, 0xFF, 0xFF }; { 0x4A, 0x41, 0x44, 0x45 };
             BigInteger biData = new BigInteger(tmp, true);
             BigInteger biStart = new BigInteger(tmp2, true);
             bool finish = false;
@@ -459,6 +468,22 @@ namespace Server_Class
             //myBar.Bar.Border.Width = 20;
             zedGraphControl1.AxisChange();
             zedGraphControl1.Refresh();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            if (Utility.HexEncoding.GetByteCount(HashBox.Text) != 16)
+            {
+                MessageBox.Show("Zła długość hasha, wprowadź poprawny hash MD5");
+                return;
+            }
+            int z;
+            searchHash = Utility.HexEncoding.GetBytes(HashBox.Text, out z);
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
