@@ -7,3 +7,4 @@ C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Server\obj\Debug\Server
 C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Server\obj\Debug\SR02_Server.csproj.GenerateResource.Cache
 C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Server\obj\Debug\Server.exe
 C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Server\obj\Debug\Server.pdb
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Server\obj\Debug\Server_Class.Properties.Resources.resources

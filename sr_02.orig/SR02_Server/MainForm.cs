@@ -322,7 +322,7 @@ namespace Server_Class
                         // KONIEC DANYCH
                     }*/
                     ClientInfo best;
-                    ClientInfo best2; // second price
+                    ClientInfo best2; 
                     try
                     {
                         if (clientsInfoList.Count > 0)

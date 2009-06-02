@@ -78,16 +78,18 @@ namespace Server_Class
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.Location = new System.Drawing.Point(12, 41);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 23);
             this.button1.TabIndex = 7;
             this.button1.Text = "Koniec obliczeń";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Enabled = false;
             this.label1.Location = new System.Drawing.Point(110, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 13);
@@ -97,6 +99,7 @@ namespace Server_Class
             // workingModeComboBox
             // 
             this.workingModeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.workingModeComboBox.Enabled = false;
             this.workingModeComboBox.FormattingEnabled = true;
             this.workingModeComboBox.Location = new System.Drawing.Point(227, 14);
             this.workingModeComboBox.Name = "workingModeComboBox";
@@ -107,12 +110,13 @@ namespace Server_Class
             // buttonStart
             // 
             this.buttonStart.AutoSize = true;
+            this.buttonStart.BackColor = System.Drawing.SystemColors.Info;
             this.buttonStart.Location = new System.Drawing.Point(12, 12);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(92, 23);
             this.buttonStart.TabIndex = 3;
             this.buttonStart.Text = "Start obliczeń";
-            this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.UseVisualStyleBackColor = false;
             this.buttonStart.Click += new System.EventHandler(this.ButtonStartClick);
             // 
             // tabControl1
