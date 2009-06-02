@@ -32,7 +32,7 @@ namespace Server_Class
     public partial class MainForm : Form
     {
         LineItem myCurve;
-        BarItem myBar;
+        //BarItem myBar;
         private TcpListener tcpListener;
         private Thread listenThread;
         private Thread managerThread;
@@ -40,8 +40,6 @@ namespace Server_Class
         private Mutex managerMutex = new Mutex();
         private volatile int wait_ans_count = 0;
         private volatile int wait_InitData_Ans_count = 0;
-        private double Dutch_Act_Time = 0.0;
-        private double Dutch_Time_Step = 0.0;
         private Statistics statistics;
         private Random random;
         private UInt32 packSize;
