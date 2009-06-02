@@ -18,8 +18,18 @@ namespace Server_Class
 	/// </summary>
 	public class ClientInfo
 	{
+        /// <summary>
+        /// Statistics class instance for client.
+        /// </summary>
 		public LastStat statistics;
-		public TcpClient tcpClient;	
+        /// <summary>
+        /// Client socket.
+        /// </summary>
+		public TcpClient tcpClient;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ClientInfo"/> class.
+        /// </summary>
+        /// <param name="tcpc">The Client socket.</param>
 		public ClientInfo(TcpClient tcpc)
 		{
 			statistics = new LastStat();
