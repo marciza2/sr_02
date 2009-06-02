@@ -208,7 +208,14 @@ namespace Client_Worker_Class
                 ansMessage.SetContentObject(msgContent_InitData_Ans);
                 byte [] buffer = ansMessage.Serialize();
                 clientStream.Write(buffer, 0, buffer.Length);
-                clientStream.Flush();							
+                clientStream.Flush();
+                Thread.Sleep(10);
+                MsgContent_Ask_For_Work msgContent_Ask_For_Work = new MsgContent_Ask_For_Work(biData.getBytes().Length, "");
+                ansMessage.SetContentObject(msgContent_Ask_For_Work);
+                buffer = null;
+                buffer = ansMessage.Serialize();
+                clientStream.Write(buffer, 0, buffer.Length);
+                
             }
         }
 		void listeningFun()

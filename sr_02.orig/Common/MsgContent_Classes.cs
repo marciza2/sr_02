@@ -60,4 +60,15 @@ namespace Server_Class
             this.Time = Time;
         }
     }
+    public class MsgContent_Ask_For_Work : MsgContent
+    {
+        public int Len;
+        public string Msg;
+        public MsgContent_Ask_For_Work() { }
+        public MsgContent_Ask_For_Work(int Len, string Msg)
+        {
+            this.Len = Len;
+            this.Msg = Msg;
+        }
+    }
 }

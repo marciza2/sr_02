@@ -23,6 +23,7 @@ namespace Server_Class
     [XmlInclude(typeof(MsgContent_Data))]
     [XmlInclude(typeof(MsgContent_Data_To_Estimate))]
     [XmlInclude(typeof(MsgContent_InitData_Ans))]
+    [XmlInclude(typeof(MsgContent_Ask_For_Work))]
     public class ComMessage
 	{
         /// <summary>
@@ -64,7 +65,11 @@ namespace Server_Class
             /// <summary>
             /// 
             /// </summary>
-            FINISH              /* Koniec obliczeń */
+            FINISH,              /* Koniec obliczeń */
+            /// <summary>
+            /// Zapytanie o zadanie
+            /// </summary>
+            ASK_FOR_WORK
         };
         /// <summary>
         /// Header
