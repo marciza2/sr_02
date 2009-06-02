@@ -9,9 +9,6 @@ namespace Server_Class
     enum CommunicationMode
     {
         CMSimple,
-        CMDutchAuction,
-        
-        CMFirstPriceAuction,
-        CMVickreyAuction
+        CMSimple2
     }
 }

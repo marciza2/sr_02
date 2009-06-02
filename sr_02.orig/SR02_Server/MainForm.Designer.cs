@@ -38,11 +38,9 @@ namespace Server_Class
 		{
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.workGenerationModeComboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.workingModeComboBox = new System.Windows.Forms.ComboBox();
             this.buttonStart = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -57,9 +55,7 @@ namespace Server_Class
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.workGenerationModeComboBox);
             this.panel1.Controls.Add(this.workingModeComboBox);
             this.panel1.Controls.Add(this.buttonStart);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -68,14 +64,14 @@ namespace Server_Class
             this.panel1.Size = new System.Drawing.Size(590, 90);
             this.panel1.TabIndex = 3;
             // 
-            // workGenerationModeComboBox
+            // label1
             // 
-            this.workGenerationModeComboBox.FormattingEnabled = true;
-            this.workGenerationModeComboBox.Location = new System.Drawing.Point(274, 39);
-            this.workGenerationModeComboBox.Name = "workGenerationModeComboBox";
-            this.workGenerationModeComboBox.Size = new System.Drawing.Size(121, 21);
-            this.workGenerationModeComboBox.TabIndex = 5;
-            this.workGenerationModeComboBox.SelectedIndexChanged += new System.EventHandler(this.workGenerationModeComboBox_SelectedIndexChanged);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(157, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Protokół komunikacji:";
             // 
             // workingModeComboBox
             // 
@@ -98,24 +94,6 @@ namespace Server_Class
             this.buttonStart.UseVisualStyleBackColor = true;
             this.buttonStart.Click += new System.EventHandler(this.ButtonStartClick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(157, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Protokół komunikacji:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(157, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "\"Rozkład zleceń\":";
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -133,7 +111,7 @@ namespace Server_Class
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(399, 243);
+            this.tabPage1.Size = new System.Drawing.Size(582, 387);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Log:";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -144,7 +122,7 @@ namespace Server_Class
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Location = new System.Drawing.Point(3, 3);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(393, 237);
+            this.richTextBox1.Size = new System.Drawing.Size(576, 381);
             this.richTextBox1.TabIndex = 5;
             this.richTextBox1.Text = "";
             // 
@@ -202,8 +180,6 @@ namespace Server_Class
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.ComboBox workingModeComboBox;
-        private System.Windows.Forms.ComboBox workGenerationModeComboBox;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;

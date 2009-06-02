@@ -10,3 +10,11 @@ E:\sr_02\projekt_sr02\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Clien
 E:\sr_02\projekt_sr02\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Client_Worker\obj\Release\Client_Worker.exe
 D:\Documents and Settings\Marcinek\sr_02\sr_02\SR02_Client_Worker\bin\Release\Client_Worker.exe.config
 D:\Documents and Settings\Marcinek\sr_02\sr_02\SR02_Client_Worker\obj\Release\Client_Worker.exe
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\bin\Release\Client_Worker.exe.config
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\obj\Release\Client_Worker.exe
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\bin\Release\Client_Worker.exe
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\bin\Release\ZedGraph.dll
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\bin\Release\ZedGraph.xml
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\obj\Release\Client_Worker_Class.MainForm.resources
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Client_Worker\obj\Release\SR02_Client_Worker.csproj.GenerateResource.Cache

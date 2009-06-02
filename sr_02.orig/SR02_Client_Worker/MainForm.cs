@@ -293,23 +293,7 @@ namespace Client_Worker_Class
                                 Log("Czas: " + String.Format("{0:0.########}", statistics.GetItemTime(i)) + ", CPULoad: " + String.Format("{0:0.##}",statistics.GetItemCPULoad(i)));
 
                             }
-                            if (recMessage.conversationID.Equals(CommunicationMode.CMDutchAuction.ToString()))
-                            {
-                                double avgTime = 0.0;
-                                for(int i=0; i<statistics.GetItemsCount(); i++)
-                                {
-                                    avgTime += statistics.GetItemTime(i);
-                                }
-                                avgTime/=statistics.GetItemsCount();
-                                ansMessage = new ComMessage(ComMessage.MsgTypes.INIT_DATA_ANS);
-                                MsgContent_InitData_Ans msgContent_InitData_Ans = new MsgContent_InitData_Ans(statistics.GetItemLength(0), avgTime);
-                                ansMessage.SetContentObject(msgContent_InitData_Ans);
-                                buffer = ansMessage.Serialize();
-                                clientStream.Write(buffer, 0, buffer.Length);
-                                clientStream.Flush();							
-                                // odpowiedź zawierająca wyniki testów
-                            }
-							break;
+                            break;
                         case ComMessage.MsgTypes.DATA_TO_ESTIMATE:
                             if (finished)
                             {
