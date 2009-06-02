@@ -210,11 +210,11 @@ namespace Client_Worker_Class
                 clientStream.Write(buffer, 0, buffer.Length);
                 clientStream.Flush();
                 Thread.Sleep(10);
-                MsgContent_Ask_For_Work msgContent_Ask_For_Work = new MsgContent_Ask_For_Work(biData.getBytes().Length, "");
+                /*MsgContent_Ask_For_Work msgContent_Ask_For_Work = new MsgContent_Ask_For_Work(biData.getBytes().Length, "");
                 ansMessage.SetContentObject(msgContent_Ask_For_Work);
                 buffer = null;
                 buffer = ansMessage.Serialize();
-                clientStream.Write(buffer, 0, buffer.Length);
+                clientStream.Write(buffer, 0, buffer.Length);*/
                 
             }
         }
