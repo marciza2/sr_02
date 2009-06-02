@@ -6,8 +6,14 @@ using ZedGraph;
 
 namespace Client_Worker_Class
 {
+    /// <summary>
+    /// Statistics class
+    /// </summary>
     class Statistics
     {
+        /// <summary>
+        /// Statistics item (list element)
+        /// </summary>
         public class ClientStatItem
         {
             public int Len;
@@ -15,6 +21,13 @@ namespace Client_Worker_Class
             public double Time;
             public ProcessPriorityClass PPriority;
             ClientStatItem() { }
+            /// <summary>
+            /// Initializes a new instance of the <see cref="ClientStatItem"/> class.
+            /// </summary>
+            /// <param name="Length">The length.</param>
+            /// <param name="CPULoad">The CPU load.</param>
+            /// <param name="Time">The time.</param>
+            /// <param name="PPrio">The priority.</param>
             public ClientStatItem(int Length, float CPULoad, double Time, ProcessPriorityClass PPrio)
             {
                 this.Len = Length;

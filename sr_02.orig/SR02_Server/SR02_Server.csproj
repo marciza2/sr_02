@@ -60,9 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Common\AclMessage.cs">
-      <Link>AclMessage.cs</Link>
-    </Compile>
     <Compile Include="..\Common\BigInteger.cs">
       <Link>BigInteger.cs</Link>
     </Compile>
@@ -74,6 +71,7 @@
     </Compile>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="ClientInfo.cs" />
+    <Compile Include="ComMessage.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
