@@ -1,0 +1,2 @@
+C:\Documents and Settings\Administrator\Pulpit\marciza2-sr_02-a88ba03123d36a0e5fa7f232ee12eedcf8d26393\sr_02.orig\SR02_Client_Worker\bin\Debug\Client_Worker.exe.config
+D:\Documents and Settings\Marcinek\Pulpit\marciza2-sr_02-a88ba03123d36a0e5fa7f232ee12eedcf8d26393\sr_02.orig\SR02_Client_Worker\bin\Debug\Client_Worker.exe.config

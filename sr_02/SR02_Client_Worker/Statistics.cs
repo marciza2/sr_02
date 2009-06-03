@@ -6,8 +6,14 @@ using ZedGraph;
 
 namespace Client_Worker_Class
 {
+    /// <summary>
+    /// Statistics class
+    /// </summary>
     class Statistics
     {
+        /// <summary>
+        /// Statistics item (list element)
+        /// </summary>
         public class ClientStatItem
         {
             public int Len;
@@ -15,6 +21,13 @@ namespace Client_Worker_Class
             public double Time;
             public ProcessPriorityClass PPriority;
             ClientStatItem() { }
+            /// <summary>
+            /// Element of Statistic Items  <see cref="ClientStatItem"/> class.
+            /// </summary>
+            /// <param name="Length">The length.</param>
+            /// <param name="CPULoad">The CPU load.</param>
+            /// <param name="Time">The time.</param>
+            /// <param name="PPrio">The priority.</param>
             public ClientStatItem(int Length, float CPULoad, double Time, ProcessPriorityClass PPrio)
             {
                 this.Len = Length;
@@ -30,34 +43,70 @@ namespace Client_Worker_Class
         public bool startOnce = false;
         public int LastLen;
         public UInt64 calcCount= 0;
+        /// <summary>
+        /// Gets the time.
+        /// </summary>
+        /// <returns></returns>
         public TimeSpan GetTime()
         {
             return (endTime - startTime);
         }
+        /// <summary>
+        /// Gets the items count.
+        /// </summary>
+        /// <returns></returns>
         public int GetItemsCount()
         {
             return Items.Count;
         }
+        /// <summary>
+        /// Gets the length of the item.
+        /// </summary>
+        /// <param name="i">The i.</param>
+        /// <returns></returns>
         public int GetItemLength(int i)
         {
             return Items[i].Len;
         }
+        /// <summary>
+        /// Gets the item time.
+        /// </summary>
+        /// <param name="i">The i.</param>
+        /// <returns></returns>
         public double GetItemTime(int i)
         {
             return Items[i].Time;
         }
+        /// <summary>
+        /// Gets the item CPU load.
+        /// </summary>
+        /// <param name="i">The i.</param>
+        /// <returns></returns>
         public float GetItemCPULoad(int i)
         {
             return Items[i].CPULoad;
         }
+        /// <summary>
+        /// Gets the speed (time).
+        /// </summary>
+        /// <returns></returns>
         public double GetSpeed()
         {
             return calcCount / (double)((DateTime.Now - startTime).TotalSeconds);
         }
+        /// <summary>
+        /// New statistic list 
+        /// </summary>
         public Statistics()
         {
             Items = new List<ClientStatItem>();
         }
+        /// <summary>
+        /// Adds the element to list.
+        /// </summary>
+        /// <param name="Length">The length.</param>
+        /// <param name="CPULoad">The CPU load.</param>
+        /// <param name="Time">The time.</param>
         public void AddItem(int Length, float CPULoad, double Time)
         {
             LastLen = Length;
@@ -65,6 +114,11 @@ namespace Client_Worker_Class
             if (Items.Count > MaxCount)
                 Items.RemoveAt(0);
         }
+        /// <summary>
+        /// Adds the element to list.
+        /// </summary>
+        /// <param name="Length">The length.</param>
+        /// <param name="CPULoad">The CPU load.</param>
         public void AddItem(int Length, float CPULoad)
         {
             LastLen = Length;
@@ -72,10 +126,22 @@ namespace Client_Worker_Class
             if (Items.Count > MaxCount)
                 Items.RemoveAt(0);
         }
+        /// <summary>
+        /// Edit element of list
+        /// </summary>
+        /// <param name="Time">The time.</param>
         public void EditLastItem(double Time)
         {
             Items[Items.Count-1].Time = Time;
         }
+        /// <summary>
+        /// Solves the tridiag.
+        /// </summary>
+        /// <param name="sub">The sub.</param>
+        /// <param name="diag">The diag.</param>
+        /// <param name="sup">The sup.</param>
+        /// <param name="b">The b.</param>
+        /// <param name="n">The n.</param>
         public void SolveTridiag(double[] sub, double[] diag, double[] sup, ref double[] b, int n)
         {
             /*                  solve linear system with tridiagonal n by n matrix a
@@ -101,7 +167,13 @@ namespace Client_Worker_Class
             }
         }
 
-		
+
+        /// <summary>
+        /// Sps the line.
+        /// </summary>
+        /// <param name="knownSamples">The known samples.</param>
+        /// <param name="z">The z.</param>
+        /// <returns></returns>
         public double SpLine(List<KeyValuePair<double, double>> knownSamples, double z)
         {
             int np = knownSamples.Count;
@@ -182,6 +254,13 @@ namespace Client_Worker_Class
             return 0;
 
         }
+        /// <summary>
+        /// Calcs the time.
+        /// </summary>
+        /// <param name="Length">The length.</param>
+        /// <param name="Count">The count.</param>
+        /// <param name="CPULoad">The CPU load.</param>
+        /// <returns></returns>
         public double CalcTime(int Length, UInt32 Count, float CPULoad)
         {
             List<KeyValuePair<double, double>> knownSamples = new List<KeyValuePair<double, double>>();
@@ -204,6 +283,12 @@ namespace Client_Worker_Class
             }
             return y * (double)Count;
         }
+        /// <summary>
+        /// Gets the point pair list.
+        /// </summary>
+        /// <param name="len">The len.</param>
+        /// <param name="start">The start.</param>
+        /// <returns></returns>
         public PointPairList GetPointPairList(int len, int start)
         {
             PointPairList list = new PointPairList();
@@ -217,10 +302,21 @@ namespace Client_Worker_Class
                 }
             return list;
         }
+        /// <summary>
+        /// Gets the point pair list.
+        /// </summary>
+        /// <param name="len">The len.</param>
+        /// <returns></returns>
         public PointPairList GetPointPairList(int len)
         {
             return GetPointPairList(len, 0);
         }
+        /// <summary>
+        /// Gets the optimized point pair list.
+        /// </summary>
+        /// <param name="len">The len.</param>
+        /// <param name="start">The start.</param>
+        /// <returns></returns>
         public PointPairList GetOptimizedPointPairList(int len, int start)
         {
             PointPairList list = GetPointPairList(len, start);
@@ -251,6 +347,11 @@ namespace Client_Worker_Class
             list.Sort();
             return list;
         }
+        /// <summary>
+        /// Gets the optimized point pair list.
+        /// </summary>
+        /// <param name="len">The len.</param>
+        /// <returns></returns>
         public PointPairList GetOptimizedPointPairList(int len)
         {
             return GetOptimizedPointPairList(len, 0);

@@ -60,18 +60,15 @@ namespace Server_Class
             this.Time = Time;
         }
     }
-    public class MsgContent_Dutch_Time_To_Do : MsgContent
+    public class MsgContent_Ask_For_Work : MsgContent
     {
         public int Len;
-        public UInt32 Pack;
-        public double Time;
-        public MsgContent_Dutch_Time_To_Do() { }
-        public MsgContent_Dutch_Time_To_Do(int Len, UInt32 Pack, double Time)
+        public string Msg;
+        public MsgContent_Ask_For_Work() { }
+        public MsgContent_Ask_For_Work(int Len, string Msg)
         {
             this.Len = Len;
-            this.Pack = Pack;
-            this.Time = Time;
+            this.Msg = Msg;
         }
     }
-
 }

@@ -18,9 +18,10 @@ namespace Client_Worker_Class
 	/// </summary>
 	internal sealed class Program
 	{
-		/// <summary>
-		/// Program entry point.
-		/// </summary>
+        /// <summary>
+        /// Program entry point.
+        /// </summary>
+        /// <param name="args">The args.</param>
 		[STAThread]
 		private static void Main(string[] args)
 		{

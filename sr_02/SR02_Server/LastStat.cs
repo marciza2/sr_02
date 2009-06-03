@@ -18,7 +18,13 @@ namespace Server_Class
 	public class LastStat
 	{
 
+        /// <summary>
+        /// Calculation time.
+        /// </summary>
 		public double calcTime;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LastStat"/> class.
+        /// </summary>
 		public LastStat()
 		{
 			calcTime = -1;

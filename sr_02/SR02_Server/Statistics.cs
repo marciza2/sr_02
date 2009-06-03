@@ -20,20 +20,18 @@ namespace Server_Class
             }
         }
         List<ServerStatItem> Items;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Statistics"/> class.
+        /// </summary>
         public Statistics()
         {
             Items = new List<ServerStatItem>();
         }
-        public double GetDutchStartValue(int Len, UInt32 Count)
-        {
-            double max = 0.0;
-            foreach (ServerStatItem ssItem in Items)
-                if (ssItem.Len == Len && ssItem.Time > max)
-                    max = ssItem.Time;
-            max *= Count;
-            max *= 0.33;
-            return max;
-        }
+        /// <summary>
+        /// Adds the item to the list.
+        /// </summary>
+        /// <param name="msgConInitDataAns">The message "Initialization data answer".</param>
+        /// <param name="clInfo">The Client Info class instance.</param>
         public void AddItem(MsgContent_InitData_Ans msgConInitDataAns, ClientInfo clInfo)
         {
             Items.Add(new ServerStatItem(msgConInitDataAns.Len, msgConInitDataAns.Time, clInfo));

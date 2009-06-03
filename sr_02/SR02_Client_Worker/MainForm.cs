@@ -208,7 +208,14 @@ namespace Client_Worker_Class
                 ansMessage.SetContentObject(msgContent_InitData_Ans);
                 byte [] buffer = ansMessage.Serialize();
                 clientStream.Write(buffer, 0, buffer.Length);
-                clientStream.Flush();							
+                clientStream.Flush();
+                Thread.Sleep(10);
+                /*MsgContent_Ask_For_Work msgContent_Ask_For_Work = new MsgContent_Ask_For_Work(biData.getBytes().Length, "");
+                ansMessage.SetContentObject(msgContent_Ask_For_Work);
+                buffer = null;
+                buffer = ansMessage.Serialize();
+                clientStream.Write(buffer, 0, buffer.Length);*/
+                
             }
         }
 		void listeningFun()
@@ -293,23 +300,7 @@ namespace Client_Worker_Class
                                 Log("Czas: " + String.Format("{0:0.########}", statistics.GetItemTime(i)) + ", CPULoad: " + String.Format("{0:0.##}",statistics.GetItemCPULoad(i)));
 
                             }
-                            if (recMessage.conversationID.Equals(CommunicationMode.CMDutchAuction.ToString()))
-                            {
-                                double avgTime = 0.0;
-                                for(int i=0; i<statistics.GetItemsCount(); i++)
-                                {
-                                    avgTime += statistics.GetItemTime(i);
-                                }
-                                avgTime/=statistics.GetItemsCount();
-                                ansMessage = new ComMessage(ComMessage.MsgTypes.INIT_DATA_ANS);
-                                MsgContent_InitData_Ans msgContent_InitData_Ans = new MsgContent_InitData_Ans(statistics.GetItemLength(0), avgTime);
-                                ansMessage.SetContentObject(msgContent_InitData_Ans);
-                                buffer = ansMessage.Serialize();
-                                clientStream.Write(buffer, 0, buffer.Length);
-                                clientStream.Flush();							
-                                // odpowiedź zawierająca wyniki testów
-                            }
-							break;
+                            break;
                         case ComMessage.MsgTypes.DATA_TO_ESTIMATE:
                             if (finished)
                             {
@@ -330,35 +321,6 @@ namespace Client_Worker_Class
                             else
                                 estTime = random.Next(4000) + 1000;
                             ansMessage.SetContentObject((estTime));
-                            ansMessage.txtMsg = "odp";
-                            buffer = ansMessage.Serialize();
-                            clientStream.Write(buffer, 0, buffer.Length);
-                            clientStream.Flush();
-                            break;
-                        case ComMessage.MsgTypes.DUTCH_TIME_TO_DO:
-                            MsgContent_Dutch_Time_To_Do msgContent_Dutch_Time_To_Do = (MsgContent_Dutch_Time_To_Do)recMessage.GetContentObject();
-                            // oblicz odeślij
-                            ansMessage = new ComMessage(ComMessage.MsgTypes.TIME_ESTIMATED);
-                            if (workingThread != null)
-                            {
-                                if (workingThread.IsAlive)
-                                    estTime = -1;
-                                else
-                                    estTime = statistics.CalcTime(msgContent_Dutch_Time_To_Do.Len, msgContent_Dutch_Time_To_Do.Pack, PCPUUsage.NextValue());
-                            }
-                            else
-                                estTime = random.Next(4000) + 1000;
-                            if(estTime == -1)
-                                ansMessage.SetContentObject(-1.0);
-                            else if(estTime<msgContent_Dutch_Time_To_Do.Time)
-                                ansMessage.SetContentObject(1.0);
-                            else if(estTime<msgContent_Dutch_Time_To_Do.Time+msgContent_Dutch_Time_To_Do.Time*0.1)
-                                ansMessage.SetContentObject(1.0);
-                            else
-                                ansMessage.SetContentObject(0.0);
-                            Log("Odpowiedz na DUTCH_TIME_TODO = " + (msgContent_Dutch_Time_To_Do.Time).ToString());
-                            Log("Odpowiedz na DUTCH_TIME_TODO = " + estTime.ToString());
-                            Log("Odpowiedz na DUTCH_TIME_TODO = " + ((double)ansMessage.GetContentObject()).ToString());
                             ansMessage.txtMsg = "odp";
                             buffer = ansMessage.Serialize();
                             clientStream.Write(buffer, 0, buffer.Length);
