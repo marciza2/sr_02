@@ -22,7 +22,6 @@ namespace Server_Class
     [XmlInclude(typeof(MsgContent_InitData))]
     [XmlInclude(typeof(MsgContent_Data))]
     [XmlInclude(typeof(MsgContent_Data_To_Estimate))]
-    [XmlInclude(typeof(MsgContent_Dutch_Time_To_Do))]
     [XmlInclude(typeof(MsgContent_InitData_Ans))]
     public class ComMessage
 	{
@@ -30,8 +29,7 @@ namespace Server_Class
 			INIT_DATA,			/* Dane inicjalizacyjne */
             INIT_DATA_ANS,		/* Odpowiedź z wynikami testu */
             DATA_TO_ESTIMATE,	/* Dane do oszacowania czasu obliczeń */
-		DUTCH_TIME_TO_DO,   /* Aukcja holenderska: czas do obliczenia */
-            TIME_ESTIMATED,		/* Oszacowany czas */
+		    TIME_ESTIMATED,		/* Oszacowany czas */
 			GENERAL_MSG,		/* Ogólna wiadomość - niezwiązana z obliczeniami */
 			RESULTS,			/* Zwracane wyniki */
 			SUCCESS,			/* Zwracane wyniki - osiągnięto cel */
@@ -42,7 +40,6 @@ namespace Server_Class
         public Object contentObject;
 		public string txtMsg;
         public string conversationID;
-		/* dwa typy aukcji */
 		public ComMessage()
 		{
 		}

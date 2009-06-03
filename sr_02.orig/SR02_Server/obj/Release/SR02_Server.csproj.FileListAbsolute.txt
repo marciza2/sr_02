@@ -1,0 +1,16 @@
+c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Server\bin\Release\Server.exe
+c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Server\bin\Release\ZedGraph.dll
+c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Server\bin\Release\ZedGraph.xml
+c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Server\obj\Release\ResolveAssemblyReference.cache
+c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Server\obj\Release\Server_Class.MainForm.resources
+c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Server\obj\Release\SR02_Server.csproj.GenerateResource.Cache
+c:\Studia\Systemy rozproszone\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Server\obj\Release\Server.exe
+E:\sr_02\projekt_sr02\Projekt2_CLSV_DistributedComputingFramework\SRC\SR02_Server\obj\Release\Server.exe
+D:\Documents and Settings\Marcinek\sr_02\sr_02\SR02_Server\obj\Release\Server.exe
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Server\obj\Release\Server.exe
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Server\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Server\obj\Release\Server_Class.MainForm.resources
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Server\obj\Release\SR02_Server.csproj.GenerateResource.Cache
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Server\bin\Release\Server.exe
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Server\bin\Release\ZedGraph.dll
+C:\Documents and Settings\thinkpad\sr_02\sr_02.orig\SR02_Server\bin\Release\ZedGraph.xml
